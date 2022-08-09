@@ -21,7 +21,7 @@ async function selectCustomers(){
 }
 async function insertCustomer(customer){
     const conn = await connect();
-    const sql = 'INSERT INTO clientes(nome,idade,uf) VALUES (?,?,?);');
+    const sql = 'INSERT INTO clientes(nome,idade,uf) VALUES (?,?,?);';
     const values = [customer.nome, customer.idade, customer.uf];
     return await conn.query(sql, values);
 }
